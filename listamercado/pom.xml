@@ -37,6 +37,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- inserindo dependencia do H2 para testes -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>

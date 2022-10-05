@@ -13,13 +13,13 @@ public class IProdutoServiceImpli implements IProdutoService{
 	
 	@Autowired
 	private ProdutoRepo repo;
-
-	@Override
-	public Produto criarNovoProduto(Produto prod) {
-		// TODO Auto-generated method stub
-		
-		return repo.save(prod);
-	}
+        
+        @Override
+        public Produto criarNovoProduto(Produto prod){
+            if(prod.getNome() == null || prod.getNome().length() == 0)
+                return null;
+                return repo.save(prod);        
+        }
 
 	@Override
 	public List<Produto> listarTodos() {
